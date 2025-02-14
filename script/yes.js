@@ -5,6 +5,13 @@ const pikaText = document.getElementById("pikaText");
 
 const bgAudio = document.getElementById('bg-music');
 
+const flipCardInner = document.getElementById("flip-card-inner");
+
+// Thêm event listener để xử lý sự kiện click
+flipCard.addEventListener("click", function () {
+    flipCard.classList.toggle("flipped"); // Thêm hoặc gỡ class 'flipped'
+});
+
 wordMessage.addEventListener('animationend', () => {
   // flipCard.style.visibility="visible";
   setTimeout(() => {
@@ -104,9 +111,10 @@ function createSnowflake() {
   });
 
   // Remove the snowflake after the animation ends
-  snow.addEventListener('animationend', function() {
-      snow.remove();  // Remove snowflake after animation ends
-  });
+  // snow.addEventListener('animationend', function() {
+  //     snow.remove();  // Remove snowflake after animation ends
+  // });
+  setTimeout(() => snow.remove(), timeRun);
 }
 
 // Call createSnowflake every 500ms to generate new snowflakes

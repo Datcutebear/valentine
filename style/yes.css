@@ -41,15 +41,19 @@ body {
   background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
   background-size: 66px 66px;
 }
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
 .flip-card-inner #pikaText {
   visibility: hidden;
   transform: rotateY(180deg);
 }
 
-.flip-card:hover .flip-card-inner {
+/* .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
   align-items: left;
-}
+} */
 .flip-card:hover .flip-card-inner #pikaText {
   visibility: visible;
   width: 100%;
